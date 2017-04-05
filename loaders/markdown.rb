@@ -3,7 +3,6 @@ A___SELF = self
 class MdRender < Redcarpet::Render::HTML
 
   def image(src, title, alt_text)
-    p A___SELF
     %Q{<img
       class="img-responsive center-block"
       src=#{

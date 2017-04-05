@@ -93,10 +93,10 @@ var adBlockHover = function(el) {
 <link href="//static.fc2.com/css/blog/entry_adult.css" rel="stylesheet" type="text/css" />
 <div class="AdContainer">
 <div class="adBlock"><img src="i/image/rank_01.gif" alt="" border="0" />スポンサーサイト</div>
-<div class="adBlock" onmouseout="adBlock(this)" onmouseover="adBlockHover(this)" onclick="javascript: adSubmit('//media.fc2.com/clicks.php?id=3665')">
-<a class="adTitle" href="javascript: void(0)">デリヘルもソープもイメクラも気に入った子がきっと見つかる</a><br />
-<span class="adDescription">超大型リニューアル中の大好評風俗情報サイト！</span></div>
-<!-- FC2管理用 --><img src="//media.fc2.com/counter_img.php?id=1260" width="1" height="1"><img src="//media.fc2.com/counter_img.php?id=3665" width="1" height="1"><!-- FC2管理用 --><div class="adBlock" onmouseout="adBlock(this)" onmouseover="adBlockHover(this)" onclick="javascript: adSubmit('//media.fc2.com/clicks.php?id=4371')">
+<div class="adBlock">[PR]<br />
+<script type="text/javascript" src="//textad.net/cgi-bin/manager.cgi?category_id=35&i=1&from=blog" charset="Shift_JIS"></script>
+<!-- FC2管理用 --><img src="//media.fc2.com/counter_img.php?id=2696" width="1" height="1"><img src="//media.fc2.com/counter_img.php?id=1260" width="1" height="1"><!-- FC2管理用 -->
+<br /></div><div class="adBlock" onmouseout="adBlock(this)" onmouseover="adBlockHover(this)" onclick="javascript: adSubmit('//media.fc2.com/clicks.php?id=4371')">
 <a class="adTitle" href="javascript: void(0)">FC2公認の男性用高額求人サイトが誕生！</a><br />
 <span class="adDescription">稼ぎたい男子はここで仕事を探せ！</span></div>
 
