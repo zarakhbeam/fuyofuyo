@@ -103,7 +103,6 @@ class IndexCreator
                     :title => File.basename(f, '.*'),
                     :path  => fn.sub(%r{^#{dst}}, '')
                 )
-                puts "#{f} => #{fn}"
             end
         end
         dir_indices.each_value do |data|
