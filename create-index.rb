@@ -92,6 +92,7 @@ class IndexCreator
                     dd = File.basename(sdst, '.*')
                     fn = File.join File.dirname(fn), dd.slice(0, dd.length/2) + '.html'
                 end
+                next if File.exists?(fn) && File.mtime(fn) >= File.mtime(f)
                 if @loader_dict.has_key?(ext) && !File.basename(sdst).start_with?('.')
                     @loader_dict[ext.downcase].transfer f, fn, fn.sub(%r{^#{dst}}, ''), @config[:url_root]
                 else
