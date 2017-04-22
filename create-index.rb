@@ -92,11 +92,6 @@ class IndexCreator
                     dd = File.basename(sdst, '.*')
                     fn = File.join File.dirname(fn), dd.slice(0, dd.length/2) + '.html'
                 end
-                dir_indices[File.dirname f][:files].push(
-                    :title => File.basename(f, '.*'),
-                    :path  => fn.sub(%r{^#{dst}}, '')
-                )
-                next if File.exists?(fn) && File.mtime(fn) >= File.mtime(f)
                 if @loader_dict.has_key?(ext) && !File.basename(sdst).start_with?('.')
                     @loader_dict[ext.downcase].transfer f, fn, fn.sub(%r{^#{dst}}, ''), @config[:url_root]
                 else
@@ -104,6 +99,10 @@ class IndexCreator
                     fn = sdst
                     FileUtils.copy f, fn
                 end
+                dir_indices[File.dirname f][:files].push(
+                    :title => File.basename(f, '.*'),
+                    :path  => fn.sub(%r{^#{dst}}, '')
+                )
             end
         end
         dir_indices.each_value do |data|
