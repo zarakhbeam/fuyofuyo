@@ -20,6 +20,6 @@ on_ext :md
 for_each do |src, dst|
     res = Redcarpet::Markdown
         .new(MdRender)
-        .render(File.read src)
+        .render(File.read(src).gsub(/^\s+/,'').gsub(/\n+/m, "\n\n"))
     File.write dst, res
 end
