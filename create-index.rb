@@ -78,7 +78,7 @@ class IndexCreator
                 else
                     FileUtils.mkpath File.join(sdst, 'asserts')
                     dir_indices[File.dirname f][:dirs].push(
-                        :title => File.basename(f, '.*'),
+                        :title => f,
                         :path => rpath
                     )
                     dir_indices[f] = {:rpath => rpath, :files=>[], :dirs=>[]}
