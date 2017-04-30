@@ -84,13 +84,13 @@ class IndexCreator
                     dir_indices[f] = {:rpath => rpath, :files=>[], :dirs=>[]}
                 end
             else
-                Find.prune if File.basename(f) == 'index.json'
+                # Find.prune if File.basename(f) == 'index.json'
                 fn = File.join File.dirname(sdst), File.basename(sdst, '.*')+'.html'
                 begin
                     FileUtils.touch(fn)
                 rescue Errno::ENAMETOOLONG => e
                     dd = File.basename(sdst, '.*')
-                    fn = File.join File.dirname(fn), dd.slice(0, dd.length/2) + '.html'
+                    fn = File.join File.dirname(fn), dd.slice(0, dd.length-5) + '.html'
                 end
                 if @loader_dict.has_key?(ext) && !File.basename(sdst).start_with?('.')
                     @loader_dict[ext.downcase].transfer f, fn, fn.sub(%r{^#{dst}}, ''), @config[:url_root]

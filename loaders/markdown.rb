@@ -16,7 +16,7 @@ class MdRender < Redcarpet::Render::HTML
     </a>}
   end
 end
-on_ext :md
+on_ext :md, :txt
 for_each do |src, dst|
     res = Redcarpet::Markdown
         .new(MdRender)
