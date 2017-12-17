@@ -72,8 +72,10 @@ class IndexCreator
                 fn = sdst
                 FileUtils.mkpath sdst
                 bn = File.basename(sdst)
-                if  bn == 'asserts' || bn.start_with?('.')
+                if  bn == 'asserts'
                     FileUtils.copy_entry f, sdst
+                    Find.prune
+                elsif File.basename(f).start_with?('.')
                     Find.prune
                 else
                     FileUtils.mkpath File.join(sdst, 'asserts')
